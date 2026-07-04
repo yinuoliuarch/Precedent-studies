@@ -1,27 +1,34 @@
-﻿ Bibliography: Author / Primary Sources
+﻿SEEK — An Archival Research Website
+# Overview
+   This project is a research website dedicated to SEEK (1970), an interactive installation developed by Nicholas Negroponte and the MIT Architecture Machine Group (Architecture Machine Group) at MIT. Originally exhibited in Software, curated by Jack Burnham at the Jewish Museum in New York, SEEK explored early ideas of cybernetics, responsive environments, and human–machine interaction through a computer-controlled robotic arm operating within an environment inhabited by gerbils.
 
-These sources are by Nicholas Negroponte or directly connected to the Architecture Machine Group's own framing of the project.
+   Rather than presenting SEEK as a conventional historical artifact, this website approaches the project as an evolving archival document. It combines historical research, contextual analysis, visual documentation, and system diagrams into an interface that encourages exploration and close reading.
 
-1. Negroponte, Nicholas. **"Seek."** 1970. PDF hosted by WorryDream.  
-   URL: https://worrydream.com/refs/Negroponte_1970_-_Seek.pdf  
-   Use this as the most direct primary text for the project. It is especially important for understanding how Negroponte described SEEK as a machine system intended to respond to complex, unpredictable behavior.
+# Design Language
+   This website is conceived as an archival research document rather than a conventional portfolio or exhibition website. Its visual language draws inspiration from Cassette Futurism, minimalist design, and the graphic conventions of late-1960s and early-1970s technical publications. Rather than using retro aesthetics as decoration or nostalgia, the design reflects the material culture through which research, computation, and experimental technologies were communicated during that period.
 
-2. Negroponte, Nicholas. **"Terms and Conditions."** *e-flux Architecture*, Digital X, 2019.  
-   URL: https://www.e-flux.com/architecture/digital-x/260419/terms-and-conditions  
-   This later reflection is useful for situating the Architecture Machine Group within a longer history of participation, computation, flexibility, and the culture of technological demonstration.
+   Cassette Futurism represents a vision of the future shaped by analogue technologies, early computing, and cybernetic thinking. Before sleek digital interfaces became commonplace, computers were experienced through control panels, monochrome displays, printed manuals, punched cards, engineering diagrams, and institutional documentation. This project adopts that visual vocabulary to situate SEEK within its original intellectual and technological context.
 
-## Bibliography: Critique & Comments from Others
+   The interface borrows from museum catalogues, engineering manuals, laboratory notebooks, and research dossiers. Information is organized through a strict grid, restrained typography, thin borders, and systematic spacing. Rather than encouraging rapid browsing, the layout invites careful reading and gradual exploration, mirroring the experience of consulting an archival document.
 
-These sources help frame SEEK from the outside: as architectural history, media criticism, systems art, robotics history, and institutional critique.
+   Minimalism serves a functional rather than aesthetic purpose. The limited color palette, monospaced typography, and absence of decorative effects allow the research material itself to remain the primary focus. Images are presented as documentary evidence within an archive instead of visual embellishments, while the written analysis forms the central narrative of the project.
 
-1. Shepard, Mark. **"ARC 605: (re)seeking architecture."** Center for Architecture and Situated Technologies, University at Buffalo, October 9, 2018.  
-   URL: https://ubwp.buffalo.edu/cast/2018/10/09/arc-605-reseeking-architecture/  
-   This course brief gives a strong architectural reading of SEEK as an early attempt to integrate artificial intelligence and architecture. It is especially useful because it does not romanticize the project: it names the installation's technical and ethical failures while explaining why SEEK still matters for responsive architecture today.
+   These design decisions also reflect the conceptual foundations of SEEK. Developed by Nicholas Negroponte and the MIT Architecture Machine Group in 1970, SEEK emerged from research into cybernetics, responsive environments, and human–machine interaction. The website therefore adopts an interface that suggests an information system rather than a static exhibition, reinforcing themes of organization, observation, feedback, and experimentation that lie at the heart of the project.
 
-2. Cybernetic Zoo. **"1969-70 - SEEK - Nicholas Negroponte (American)."** *Cybernetic Zoo*, October 27, 2010; updated December 30, 2011.  
-   URL: https://cyberneticzoo.com/robots-in-art/1969-70-seek-nicholas-negroponte-american/  
-   This source is useful for visual and technical documentation. It describes the Plexiglas enclosure, blocks, gerbils, robotic arm, and the system's attempt to rebuild block configurations after disruption. It also compiles historical images and excerpts from later descriptions of the project.
+   Ultimately, the website aims to bridge historical authenticity with contemporary accessibility. It does not attempt to recreate the past, but instead interprets the visual language of early computational culture as a framework for presenting historical research today.
 
-3. Emerson, Lori. **"Selling the Future at the MIT Media Lab."** Lori Emerson, February 17, 2016.  
-   URL: https://loriemerson.net/2016/02/17/selling-the-future-at-the-mit-media-lab/  
-   This source is not only about SEEK, but it is useful for critiquing the institutional culture around the MIT Media Lab and its rhetoric of "inventing the future." It helps place Negroponte's work within a broader narrative of technological futurism, media spectacle, and research-lab branding.
+# Features
+   Historical and contextual analysis of SEEK
+   Technical explanation of the installation and system logic
+   Scrollable text archive
+   Image archive with expandable photographs
+   Responsive two-panel reading interface
+   Modular content structure using Markdown
+   Archival-inspired interface and typography
+
+# Planned additions
+   Cross-references between the Text Archive and Image Archive
+   Interactive figure labeling system
+   Search and filtering within the archive
+   Expanded archival image collection
+   Additional Architecture Machine Group projects for historical comparison
