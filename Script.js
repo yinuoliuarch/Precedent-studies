@@ -1,4 +1,6 @@
 ﻿const CONTENT_ROOT = "content/seek";
+const IMAGE_ARCHIVE_COUNT = 20;
+const IMAGE_ARCHIVE_EXTENSIONS = ["jpg", "png", "webp", "jpeg"];
 
 function escapeHtml(value) {
   return value
@@ -142,6 +144,59 @@ async function loadMarkdownContent() {
   );
 }
 
+function createImageArchiveSlot(index) {
+  const paddedIndex = String(index).padStart(2, "0");
+  const figure = document.createElement("figure");
+  const button = document.createElement("button");
+  const slotLabel = `Archive ${paddedIndex}`;
+  const sources = IMAGE_ARCHIVE_EXTENSIONS.map((extension) => `assets/archive-${paddedIndex}.${extension}`);
+
+  figure.className = "image-record is-empty";
+  figure.dataset.slot = paddedIndex;
+
+  button.className = "archive-thumb";
+  button.type = "button";
+  button.dataset.caption = slotLabel;
+  button.setAttribute("aria-label", `Open ${slotLabel}`);
+
+  const img = document.createElement("img");
+  img.alt = slotLabel;
+
+  let sourceIndex = 0;
+  img.addEventListener("load", () => {
+    figure.classList.remove("is-empty");
+    button.dataset.full = img.currentSrc || img.src;
+  });
+  img.addEventListener("error", () => {
+    sourceIndex += 1;
+
+    if (sourceIndex < sources.length) {
+      img.src = sources[sourceIndex];
+      return;
+    }
+
+    img.removeAttribute("src");
+    button.removeAttribute("data-full");
+  });
+
+  img.src = sources[sourceIndex];
+  button.appendChild(img);
+  figure.appendChild(button);
+
+  return figure;
+}
+
+function initImageArchive() {
+  const archiveGrid = document.querySelector("[data-image-archive]");
+  if (!archiveGrid) return;
+
+  archiveGrid.innerHTML = "";
+
+  for (let index = 1; index <= IMAGE_ARCHIVE_COUNT; index += 1) {
+    archiveGrid.appendChild(createImageArchiveSlot(index));
+  }
+}
+
 function initSectionNavigation() {
   const sectionLinks = document.querySelectorAll(".section-nav a");
   const textArchive = document.querySelector(".text-archive");
@@ -196,6 +251,7 @@ function initLightbox() {
   archiveThumbs.forEach((thumb) => {
     thumb.addEventListener("click", () => {
       if (!lightbox || !lightboxImage || !lightboxCaption) return;
+      if (!thumb.dataset.full) return;
 
       const image = thumb.querySelector("img");
       const caption = thumb.dataset.caption || "";
@@ -219,6 +275,7 @@ function initLightbox() {
 loadMarkdownContent()
   .then(() => {
     initSectionNavigation();
+    initImageArchive();
     initLightbox();
   })
   .catch((error) => {
