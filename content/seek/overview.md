@@ -5,7 +5,7 @@
 
 **SEEK: Architecture as a Responsive Machine**
 
-SEEK (1969鈥?970) was an experimental installation developed by Nicholas Negroponte and the MIT Architecture Machine Group (later became the MIT Media LaB). First exhibited in Software, the landmark exhibition curated by Jack Burnham at the Jewish Museum in New York in 1970, SEEK explored how computation, robotics, and living organisms could coexist within a continuously changing environment.
+SEEK (1969-1970) was an experimental installation developed by Nicholas Negroponte and the MIT Architecture Machine Group (later became the MIT Media LaB). First exhibited in Software, the landmark exhibition curated by Jack Burnham at the Jewish Museum in New York in 1970, SEEK explored how computation, robotics, and living organisms could coexist within a continuously changing environment.
 
 The installation consisted of a Plexiglas enclosure filled with hundreds of small cubic blocks that formed a miniature built environment for a colony of gerbils. Suspended above the enclosure, a computer-controlled robotic arm monitored and manipulated the blocks according to programmed spatial rules. As the gerbils moved through the environment, they displaced blocks, collapsed structures, and continually altered the carefully arranged layout. The computer detected these discrepancies between its internal model and the physical environment, directing the robotic arm to reorganize the blocks in an attempt to restore鈥攐r sometimes reinforce鈥攖he evolving spatial configuration.
 
