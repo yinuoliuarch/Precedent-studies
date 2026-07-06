@@ -1,4 +1,4 @@
-const CONTENT_ROOT = "content/seek";
+﻿const CONTENT_ROOT = "content/seek";
 
 function escapeHtml(value) {
   return value
@@ -56,6 +56,23 @@ function markdownToHtml(markdown) {
       html.push(line);
       rawHtmlDepth = (line.match(/<div\b/g) || []).length - (line.match(/<\/div>/g) || []).length;
       rawHtmlOpen = rawHtmlDepth > 0;
+      return;
+    }
+
+    const imageMatch = trimmed.match(/^!\[(.*?)\]\((\S+)(?:\s+["'](.+?)["'])?\)$/);
+    if (imageMatch) {
+      flushParagraph(paragraph, html);
+      const alt = imageMatch[1] || "Archive image";
+      const src = imageMatch[2];
+      const caption = imageMatch[3] || alt;
+      html.push(`
+        <figure class="text-figure image-record">
+          <button class="archive-thumb text-zoom" type="button" data-full="${escapeHtml(src)}" data-caption="${escapeHtml(caption)}">
+            <img src="${escapeHtml(src)}" alt="${escapeHtml(alt)}" />
+          </button>
+          <figcaption>${escapeHtml(caption)} Click image to zoom.</figcaption>
+        </figure>
+      `);
       return;
     }
 
@@ -210,3 +227,4 @@ loadMarkdownContent()
       target.textContent = "Content unavailable.";
     });
   });
+

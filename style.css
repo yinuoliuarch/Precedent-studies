@@ -782,3 +782,29 @@ a {
     font-size: 0.62rem;
   }
 }
+
+.text-figure {
+  margin: 8px 0 28px;
+  max-width: min(100%, 980px);
+}
+
+.text-figure .archive-thumb {
+  aspect-ratio: auto;
+  background: var(--paper);
+}
+
+.text-figure .archive-thumb img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  filter: grayscale(1) contrast(1.05);
+}
+
+.text-figure figcaption {
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 0.68rem;
+  font-weight: 700;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
